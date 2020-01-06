@@ -5,6 +5,33 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+h1 {
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+
+h1::before {
+  content: " ";
+  width: 0.5em;
+  height: 2rem;
+  background-color: #a72b07;
+  position: absolute;
+  left: 0;
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: auto;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
 *,
 *:after,
 *:before {
@@ -14,34 +41,51 @@ body {
 
 .container {
   padding: 2em;
-  width: 100vh;
+  width: 100%;
+  height: 100vh;
 }
 
-.container h1 {
-  font-weight: 500;
-  font-size: 1.8rem;
+section {
+  padding: 0 2em;
 }
 
-.container h1::before {
-  content: " ";
-  width: 0.5em;
-  height: 2rem;
-  background-color: #a72b07;
-  position: absolute;
-  left: 0;
+section.catalogue {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
 }
 
-.container h2 {
+section.catalogue a {
+  text-decoration: none;
   font-size: 1.2rem;
-  font-weight: 500;
-  margin: auto;
+  color: #a72b07;
   text-align: center;
 }
 
-.container p {
-  text-align: center;
-  font-size: 1rem;
-  font-weight: 400;
+.btn {
+  background: #ffffff;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+  border-radius: 7px;
+  height: 3.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 3.5em;
+}
+
+.btn p {
+  margin: auto;
+  color: #a72b07;
+  font-size: 1.2rem;
 }
 
 .about h1::before {
@@ -120,5 +164,83 @@ header .cart span {
 
 header .burger {
   right: 1em;
+}
+
+.jumbotron {
+  height: 100%;
+  display: block;
+  -ms-grid-rows: 0.5fr auto 0.3fr;
+      grid-template-rows: 0.5fr auto 0.3fr;
+}
+
+.jumbotron .line_1 {
+  width: 50%;
+  height: 35%;
+  margin: 10em 0 3em;
+  border-right: solid white 1px;
+}
+
+.jumbotron .line_2 {
+  width: 50%;
+  height: 15%;
+  border-right: solid #7d9e83 1px;
+  margin-top: 3em;
+  position: relative;
+}
+
+.jumbotron .line_2::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 1em 0.5em 0 0.5em;
+  border-color: #7d9e83 transparent transparent transparent;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0 -0.5em -1em 0;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.35);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.35);
+  border-radius: 10px;
+}
+
+.card .card-img {
+  width: 100%;
+}
+
+.card .card-body {
+  width: 100%;
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.card .card-body h2 {
+  color: #a72b07;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.card .card-body p {
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.card .card-body a {
+  text-align: center;
+  color: #a72b07;
+  text-decoration: none;
 }
 /*# sourceMappingURL=main.css.map */

@@ -6,6 +6,33 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+h1 {
+  font-weight: 500;
+  font-size: 1.8rem;
+
+  &::before {
+    content: " ";
+    width: 0.5em;
+    height: 2rem;
+    background-color: #a72b07;
+    position: absolute;
+    left: 0;
+  }
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: auto;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
 *,
 *:after,
 *:before {
@@ -13,33 +40,39 @@ body {
 }
 .container {
   padding: 2em;
-  width: 100vh;
+  width: 100%;
+  height: 100vh;
+}
 
-  h1 {
-    font-weight: 500;
-    font-size: 1.8rem;
+section {
+  padding: 0 2em;
 
-    &::before {
-      content: " ";
-      width: 0.5em;
-      height: 2rem;
-      background-color: #a72b07;
-      position: absolute;
-      left: 0;
+  &.catalogue {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    height: 100%;
+    a {
+      text-decoration: none;
+      font-size: 1.2rem;
+      color: #a72b07;
+      text-align: center;
     }
   }
+}
 
-  h2 {
-    font-size: 1.2rem;
-    font-weight: 500;
-    margin: auto;
-    text-align: center;
-  }
+.btn {
+  background: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+  border-radius: 7px;
+  height: 3.5em;
+  display: flex;
+  margin: 0 3.5em;
 
   p {
-    text-align: center;
-    font-size: 1rem;
-    font-weight: 400;
+    margin: auto;
+    color: #a72b07;
+    font-size: 1.2rem;
   }
 }
 
@@ -120,5 +153,71 @@ header {
   }
   .burger {
     right: 1em;
+  }
+}
+
+.jumbotron {
+  height: 100%;
+  display: block;
+  grid-template-rows: 0.5fr auto 0.3fr;
+
+  .line_1 {
+    width: 50%;
+    height: 35%;
+    margin: 10em 0 3em;
+    border-right: solid white 1px;
+  }
+
+  .line_2 {
+    width: 50%;
+    height: 15%;
+    border-right: solid #7d9e83 1px;
+    margin-top: 3em;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 1em 0.5em 0 0.5em;
+      border-color: #7d9e83 transparent transparent transparent;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      margin: 0 -0.5em -1em 0;
+    }
+  }
+}
+
+.card {
+  display: flex;
+  background: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.35);
+  border-radius: 10px;
+
+  .card-img {
+    width: 100%;
+  }
+  .card-body {
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    flex-flow: column;
+
+    h2 {
+      color: #a72b07;
+      font-weight: 500;
+      font-size: 1.2rem;
+    }
+    p {
+      font-weight: 400;
+      font-size: 0.9rem;
+    }
+    a {
+      text-align: center;
+      color: #a72b07;
+      text-decoration: none;
+    }
   }
 }
