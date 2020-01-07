@@ -46,7 +46,7 @@ p {
 }
 
 section {
-  padding: 0 2em;
+  padding: 2em;
 }
 
 section.catalogue {
@@ -70,6 +70,20 @@ section.catalogue a {
   text-align: center;
 }
 
+section.about p {
+  line-height: 2.5em;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+section.about .btn {
+  background-color: #425145;
+}
+
+section.about .btn p {
+  color: white;
+}
+
 .btn {
   background: #ffffff;
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
@@ -85,7 +99,7 @@ section.catalogue a {
 .btn p {
   margin: auto;
   color: #a72b07;
-  font-size: 1.2rem;
+  font-size: 1.2rem !important;
 }
 
 .about h1::before {
@@ -242,5 +256,52 @@ header .burger {
   text-align: center;
   color: #a72b07;
   text-decoration: none;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  padding: 2em 0 5em;
+}
+
+form label {
+  font-size: 1rem;
+  line-height: 1.1rem;
+}
+
+form input {
+  border: 1px solid #7407a7;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 1px 10px rgba(116, 7, 167, 0.2);
+          box-shadow: 0px 1px 10px rgba(116, 7, 167, 0.2);
+  border-radius: 5px;
+  height: 2.5rem;
+  margin: 1em 0 2em;
+}
+
+form textarea {
+  border: 1px solid #7407a7;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 1px 10px rgba(116, 7, 167, 0.2);
+          box-shadow: 0px 1px 10px rgba(116, 7, 167, 0.2);
+  border-radius: 5px;
+  margin: 1em 0 2em;
+}
+
+form input[type="submit"] {
+  background: #7407a7;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+  border-radius: 7px;
+  color: white;
+  font-size: 1.2rem;
+  height: 3.5em;
 }
 /*# sourceMappingURL=main.css.map */

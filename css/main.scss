@@ -45,7 +45,7 @@ p {
 }
 
 section {
-  padding: 0 2em;
+  padding: 2em;
 
   &.catalogue {
     display: flex;
@@ -57,6 +57,22 @@ section {
       font-size: 1.2rem;
       color: #a72b07;
       text-align: center;
+    }
+  }
+
+  &.about {
+    p {
+      line-height: 2.5em;
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+
+    .btn {
+      background-color: #425145;
+
+      p {
+        color: white;
+      }
     }
   }
 }
@@ -72,7 +88,7 @@ section {
   p {
     margin: auto;
     color: #a72b07;
-    font-size: 1.2rem;
+    font-size: 1.2rem !important;
   }
 }
 
@@ -219,5 +235,42 @@ header {
       color: #a72b07;
       text-decoration: none;
     }
+  }
+}
+
+form {
+  display: flex;
+  flex-flow: column;
+  padding: 2em 0 5em;
+
+  label {
+    font-size: 1rem;
+    line-height: 1.1rem;
+  }
+
+  input {
+    border: 1px solid #7407a7;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 10px rgba(116, 7, 167, 0.2);
+    border-radius: 5px;
+    height: 2.5rem;
+    margin: 1em 0 2em;
+  }
+
+  textarea {
+    border: 1px solid #7407a7;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 10px rgba(116, 7, 167, 0.2);
+    border-radius: 5px;
+    margin: 1em 0 2em;
+  }
+
+  input[type="submit"] {
+    background: #7407a7;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+    border-radius: 7px;
+    color: white;
+    font-size: 1.2rem;
+    height: 3.5em;
   }
 }
