@@ -1,0 +1,73 @@
+@media screen and (min-width: 600px) {
+  .container {
+    padding: 2em;
+    width: 100%;
+    height: 50vh;
+    background: url("../images/philip-jumbotron.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .jumbotron {
+    .line_1 {
+      height: 20%;
+      margin: 5em 0 2.5em;
+    }
+
+    .btn {
+      width: 15em;
+      margin: auto;
+    }
+
+    .line_2 {
+      height: 10%;
+      margin-top: 2.5rem;
+    }
+  }
+
+  h1 {
+    &::before {
+      width: 1.5em;
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  section {
+    padding: 3.5em;
+
+    &.catalogue {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "card-1 card-2"
+        "card-3 card-4"
+        "link link";
+      grid-gap: 2em;
+
+      h1 {
+        grid-area: header;
+      }
+
+      .card {
+        &:first-of-type {
+          grid-area: card-1;
+        }
+
+        &:nth-of-type(2) {
+          grid-area: card-2;
+        }
+        &:nth-of-type(3) {
+          grid-area: card-3;
+        }
+        &:nth-of-type(4) {
+          grid-area: card-4;
+        }
+      }
+      a {
+        grid-area: link;
+      }
+    }
+  }
+}

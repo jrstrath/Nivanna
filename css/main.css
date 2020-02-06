@@ -43,10 +43,15 @@ p {
   padding: 2em;
   width: 100%;
   height: 100vh;
+  background: url("../images/philip-jumbotron.jpg");
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 section {
   padding: 2em;
+  height: 100vh;
 }
 
 section.catalogue {
@@ -93,7 +98,6 @@ section.about .btn p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 3.5em;
 }
 
 .btn p {
@@ -114,6 +118,18 @@ section.about .btn p {
   color: #7407a7;
 }
 
+.contact .btn {
+  background-color: #7407a7;
+}
+
+.contact .btn p {
+  color: #ffffff;
+}
+
+.location {
+  height: 85vh;
+}
+
 .location h1::before {
   background-color: #3aa707;
 }
@@ -122,11 +138,16 @@ section.about .btn p {
   color: #3aa707;
 }
 
+.location .map {
+  height: 30vh;
+}
+
 .jumbo {
   position: absolute;
   z-index: -1;
-  width: 100%;
-  top: 10%;
+  width: auto;
+  top: 0;
+  height: 100vh;
 }
 
 header {
@@ -187,32 +208,8 @@ header .burger {
       grid-template-rows: 0.5fr auto 0.3fr;
 }
 
-.jumbotron .line_1 {
-  width: 50%;
-  height: 35%;
-  margin: 10em 0 3em;
-  border-right: solid white 1px;
-}
-
-.jumbotron .line_2 {
-  width: 50%;
-  height: 15%;
-  border-right: solid #7d9e83 1px;
-  margin-top: 3em;
-  position: relative;
-}
-
-.jumbotron .line_2::after {
-  content: "";
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 1em 0.5em 0 0.5em;
-  border-color: #7d9e83 transparent transparent transparent;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  margin: 0 -0.5em -1em 0;
+.jumbotron .btn {
+  margin-top: 20em;
 }
 
 .card {
@@ -223,15 +220,20 @@ header .burger {
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.35);
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.35);
   border-radius: 10px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .card .card-img {
   width: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .card .card-body {
   width: 100%;
-  padding: 1em;
+  padding: 1.2em 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -239,23 +241,43 @@ header .burger {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
+  margin: auto;
 }
 
 .card .card-body h2 {
   color: #a72b07;
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .card .card-body p {
   font-weight: 400;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .card .card-body a {
   text-align: center;
   color: #a72b07;
   text-decoration: none;
+  font-size: 1rem;
+}
+
+.card#cushion .card-img {
+  background: url("../images/cushion.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card#curtains .card-img {
+  background: url("../images/curtain.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card#sofas .card-img {
+  background: url("../images/sofa.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 form {
@@ -303,5 +325,49 @@ form input[type="submit"] {
   color: white;
   font-size: 1.2rem;
   height: 3.5em;
+}
+
+.footer {
+  height: 18vh;
+  background-color: #a72b07;
+  padding: 1.5em 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.footer p {
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.footer .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.footer .social img {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 /*# sourceMappingURL=main.css.map */
