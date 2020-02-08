@@ -1,141 +1,209 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Nivanna Interiors</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/tablet.css">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <!-- Light slider Jquery -->
+        <link type="text/css" rel="stylesheet" href="src/css/vendor/lightslider.css" />
+
+        <!-- Other css files -->
+        <link rel="stylesheet" href="src/css/main.css">
+
+
+        <title>Nivanna Interiors</title>
     </head>
 
     <body>
-        <div class="container head">
-            <header>
-                <a href="#" class="logo">Nivanna Interiors</a>
+        <div class="container-fluid">
 
-                <nav>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Catalogue</a></li>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">Location</a></li>
+            <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-light bg-light" role="navigation">
+                <a class="navbar-brand" href="#">Nivanna Interiors</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="nav navbar-nav navbar-right ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Catalogue</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
                     </ul>
-                </nav>
-
-                <!-- Nav icons -->
-                <div class="icons">
-                    <div class="cart">
-                        <img src="images/shopping-cart.svg" alt="shopping cart"><span class="notification">1</span>
-                    </div>
-                    <img src="images/menu.svg" alt="menu icon" class="burger">
                 </div>
-            </header>
+            </nav>
 
             <section class="jumbotron">
-                <!-- <div class="line_1"></div> -->
-                <div class="btn">
-                    <p>Order now</p>
+                <div class="row top">
+                    <div class="jumbotron__msg col-md-6">
+                        <div class="jumbotron__msg--text m-auto">
+                            <p class="jumbotron__msg--text--head">Velit ullamcorper neque ultrices sed.</p>
+                            <p class="jumbotron__msg--text--minor">Risus fermentum proin elit nulla commodo. Sed nullam
+                                malesuada
+                                pharetra
+                                mauris, ac condimentum.</p>
+                        </div>
+                        <div class="jumbotron__btn btn">
+                            <p>Shop Now</p>
+                        </div>
+                    </div>
+                    <div class="jumbotron__img col-md-6"></div>
                 </div>
-                <!-- <div class="line_2"></div> -->
+
+                <div class="row bottom">
+                    <div class="slider col-12">
+                        <div class="prev slider__nav"></div>
+                        <ul id="jumboSlider" class="slider__slide--jumbotron">
+                            <li>
+                                <div class="slider__image"></div>
+                            </li>
+                            <li>
+                                <div class="slider__image"></div>
+                            </li>
+                            <li>
+                                <div class="slider__image"></div>
+                            </li>
+                            <li>
+                                <div class="slider__image"></div>
+                            </li>
+                            <li>
+                                <div class="slider__image"></div>
+                            </li>
+                            <li>
+                                <div class="slider__image"></div>
+                            </li>
+                        </ul>
+                        <div class="next slider__nav"></div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- To update / Change slider to match mockup -->
+
+
+            <section class="catalogue">
+                <div class="header col-sm-3">
+                    <img src="src/img/Line 5.svg" alt="header border">
+                    <div class="header__text m-auto">
+                        <h1>Catalogue</h1>
+                        <p>Browse through our catalogue section<br /> to see what we have <span>in
+                                stock
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="catalogue__menu col-md-3">
+                        <div class="menu__item">
+                            <div id="cushion" class="menu__item--row active">
+                                <p>Cushion</p>
+                            </div>
+                            <div id="curtain" class="menu__item--row">
+                                <p>Curtains</p>
+                            </div>
+                            <div id="artwork" class="menu__item--row">
+                                <p>Artwork</p>
+                            </div>
+                            <div id="bedsheets" class="menu__item--row">
+                                <p>Bedsheets</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="catalogue__items col-md-7">
+                        <div class="stock">
+                            <h2 class="stock__header">Latest</h2>
+
+                            <div id="sliderCata" class="slider__catalogue mx-keft">
+                                <!-- <div class="prev stock__nav"></div> -->
+                                <ul id="catalogueSliderLatest" class="slider__slide--catalogue">
+                                    <li>
+                                        <h3>First Slide</h3>
+                                        <p>Lorem ipsum Cupidatat quis pariatur anim.</p>
+                                    </li>
+                                    <li>
+                                        <h3>Second Slide</h3>
+                                        <p>Lorem ipsum Excepteur amet adipisicing fugiat velit nisi.</p>
+                                    </li>
+                                    <li>
+                                        <h3>First Slide</h3>
+                                        <p>Lorem ipsum Cupidatat quis pariatur anim.</p>
+                                    </li>
+                                    <li>
+                                        <h3>Second Slide</h3>
+                                        <p>Lorem ipsum Excepteur amet adipisicing fugiat velit nisi.</p>
+                                    </li>
+                                </ul>
+                                <!-- <div class="next stock__nav"></div> -->
+                            </div>
+                        </div>
+
+                        <div class="stock">
+                            <h2 class="stock__header">Popular</h2>
+
+                            <div id="sliderJumbo" class="slider__catalogue">
+                                <!-- <div class="prev stock__nav"></div> -->
+                                <ul id="catalogueSliderPopular" class="slider__slide--catalogue">
+                                    <li>
+                                        <h3>First Slide</h3>
+                                        <p>Lorem ipsum Cupidatat quis pariatur anim.</p>
+                                    </li>
+                                    <li>
+                                        <h3>Second Slide</h3>
+                                        <p>Lorem ipsum Excepteur amet adipisicing fugiat velit nisi.</p>
+                                    </li>
+                                    <li>
+                                        <h3>First Slide</h3>
+                                        <p>Lorem ipsum Cupidatat quis pariatur anim.</p>
+                                    </li>
+                                    <li>
+                                        <h3>Second Slide</h3>
+                                        <p>Lorem ipsum Excepteur amet adipisicing fugiat velit nisi.</p>
+                                    </li>
+
+                                </ul>
+                                <!-- <div class="next stock__nav"></div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
         </div>
-        </section>
 
-        <section class="catalogue">
-            <h1>Catalogue</h1>
-            <div class="card" id="cushion">
-                <div class="card-img"></div>
-                <div class="card-body">
-                    <h2>Cushions</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <a href="#" class="card-link">Order now</a>
-                </div>
-            </div>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
 
-            <div class="card" id="curtains">
-                <div class="card-img"></div>
-                <div class="card-body">
-                    <h2>Curtains</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <a href="#" class="card-link">Order now</a>
-                </div>
-            </div>
+        <!-- Image sliger -> Lightslider -->
+        <script src="src/js/vendor/lightslider.js"></script>
 
-            <div class="card" id="sofas">
-                <div class="card-img"></div>
-                <div class="card-body">
-                    <h2>Sofas</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <a href="#" class="card-link">Order now</a>
-                </div>
-            </div>
+        <!-- Custom JS -->
+        <script src="src/js/slider.js"></script>
+        <script src="src/js/main.js"></script>
 
-            <a href="#">See all</a>
-        </section>
-
-        <section class="about">
-            <h1>About us</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi veritatis aliquid quibusdam corrupti
-                exercitationem id.</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed quis tempore quia ad dignissimos minus
-                quibusdam incidunt!</p>
-            <div class="btn">
-                <p>Contact us</p>
-            </div>
-        </section>
-
-        <section class="contact">
-            <h1>Contact us</h1>
-            <form action="#">
-                <label for="email">Email</label>
-                <input type="text" name="email" id="email">
-
-
-                <label for="subject">Subject</label>
-                <input type="email" name="subject" id="subject">
-
-                <label for="message">Message</label>
-                <textarea name="message" id="" cols="30" rows="10"></textarea>
-
-                <div class="btn">
-                    <p>Send message</p>
-                </div>
-            </form>
-
-            <h2>Call / Whatsapp</h2>
-            <p>0722 461012</p>
-            <p>0733 714380</p>
-        </section>
-
-        <section class="location">
-            <h1>Location</h1>
-
-            <h2>Physical location</h2>
-            <p>Groundfloor,</p>
-            <p>City mall,</p>
-            <p>Nyali,</p>
-            <p>Mombasa</p>
-
-            <div class="map">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5000.186073217785!2d39.67795540734238!3d-4.0411807029529925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18400d181863e353%3A0x8126594c8b65fa01!2sCity%20mall!5e0!3m2!1sen!2ske!4v1578423756006!5m2!1sen!2ske"
-                    width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-            </div>
-        </section>
-
-        <section class="footer">
-            <a href="#" class="logo">Nivanna Interiors</a>
-            <p class="copyright">&copy; 2020 Nivanna Interiors</p>
-            <div class="social">
-                <img src="images/facebook.svg" alt="facebook">
-                <img src="images/twitter.svg" alt="twitter">
-                <img src="images/instagram.svg" alt="instagram">
-            </div>
-        </section>
-        </d>
     </body>
 
 </html>
