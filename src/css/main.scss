@@ -34,10 +34,18 @@ p {
     color: $white;
     font-size: 1.5rem;
   }
-  .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: $super_white;
+
+  a.navbar-brand {
+    color: $black;
+    font-weight: 500;
+    font-size: 1.5rem;
   }
 }
 .header {
@@ -54,7 +62,7 @@ p {
   p {
     span {
       color: $cyan;
-      font-weight: bold;
+      // font-weight: bold;
     }
   }
 }
@@ -108,7 +116,7 @@ section {
   }
 
   .bottom {
-    height: 20vh;
+    height: 30vh;
   }
 }
 
@@ -132,7 +140,7 @@ section {
 }
 
 .jumbotron__img {
-  height: 90%;
+  height: 100%;
   background-color: grey;
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
@@ -168,18 +176,21 @@ section {
   height: 10em;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
   background-color: $white;
-  width: 75%;
+  width: 100%;
 }
 
 .stock {
   display: flex;
   flex-flow: column;
+  height: 25vh;
+  justify-content: space-between;
 }
 
 .stock__header {
   font-weight: 500;
   font-size: 1.8rem;
   color: $black;
+  line-height: 2em;
 }
 
 .stock__slider {
@@ -250,10 +261,31 @@ section {
   height: 75vh;
   display: flex;
   flex-flow: column;
+  justify-content: space-between;
 }
 
 .slider__image {
-  height: 10em;
-  width: 10em;
+  height: 12.5em;
+  width: 15em;
   background-color: #c4c4c4;
+}
+
+.see_all {
+  display: flex;
+  justify-content: center;
+}
+
+.see_all__link {
+  font-size: 1rem;
+  text-decoration: none;
+  color: $scarlet;
+  text-align: center;
+}
+
+.social_media {
+  background-color: $white;
+  width: 10em;
+  height: 3.5em;
+  display: flex;
+  justify-content: space-evenly;
 }
