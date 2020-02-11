@@ -161,6 +161,11 @@ section.jumbotron {
   background-color: grey;
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
+  background: url("/src/img/jumbotron.jpg"), -webkit-gradient(linear, left top, left bottom, from(rgba(75, 161, 170, 0.24)), to(rgba(75, 161, 170, 0.24)));
+  background: url("/src/img/jumbotron.jpg"), linear-gradient(rgba(75, 161, 170, 0.24), rgba(75, 161, 170, 0.24));
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .jumbotron__btn {
@@ -310,7 +315,15 @@ section.jumbotron {
 .slider__image {
   height: 12.5em;
   width: 15em;
-  background-color: #c4c4c4;
+  background-color: #000000;
+}
+
+.slider__image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  opacity: 0.75;
+  width: 100%;
 }
 
 .see_all {
@@ -376,10 +389,13 @@ section.jumbotron {
   margin: auto;
 }
 
-.info {
+.info__header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -395,5 +411,93 @@ section.jumbotron {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+}
+
+.line_cyan__short {
+  background: url("/src/img/Line_cyan.svg");
+  height: 100%;
+  width: 2em;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.line_cyan__long {
+  background: url("/src/img/Line_cyan_long.svg");
+  height: 100%;
+  width: 2em;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+footer {
+  background-color: #470024;
+  padding: 3em 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer div {
+  width: 100%;
+}
+
+.footer__menu .link {
+  color: #f6f8f8;
+  font-weight: medium;
+  font-size: 1rem;
+  margin-right: 1.5em;
+}
+
+.footer__brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  text-align: center;
+  color: #f6f8f8;
+}
+
+.footer__brand .logo,
+.footer__brand .copyright {
+  color: #f6f8f8;
+}
+
+.footer__brand .logo {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.footer__social {
+  text-align: right;
+}
+
+.footer__social img {
+  margin-left: 1em;
+}
+
+.section_break {
+  height: 30vh;
+  width: 100%;
+  background: url("/src/img/living_room.jpg");
+  background-repeat: no-repeat;
+  background-position-y: 40%;
+  background-size: cover;
+}
+
+.row {
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 /*# sourceMappingURL=main.css.map */
