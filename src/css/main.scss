@@ -57,6 +57,10 @@ h2 {
 .header {
   position: relative;
   display: flex;
+
+  img {
+    margin-right: 2em;
+  }
 }
 
 .header__text {
@@ -104,25 +108,27 @@ a.nav-brand {
 }
 
 section {
-  height: 100vh;
+  height: 100%;
   position: relative;
-  padding: 2em 1em;
+  padding: 2em;
 
   &.jumbotron {
     height: 100vh;
+    padding-right: 0;
   }
 }
 .jumbotron {
-  background-color: $super_white;
   position: relative;
-  overflow: hidden;
+  background-color: transparent;
 
   .top {
     height: 65vh;
+    position: relative;
   }
 
   .bottom {
     height: 30vh;
+    padding-right: 2em;
   }
 }
 
@@ -146,7 +152,7 @@ section {
 }
 
 .jumbotron__img {
-  height: 100%;
+  height: 90%;
   background-color: grey;
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
@@ -155,6 +161,9 @@ section {
   background-blend-mode: overlay;
   background-repeat: no-repeat;
   background-size: cover;
+  position: absolute;
+  width: 47.5vw;
+  right: 0;
 }
 
 .jumbotron__btn {
@@ -170,9 +179,15 @@ section {
   display: flex;
   align-items: center;
   margin: auto;
+  width: 100%;
+  position: relative;
 
   &#sliderJumbo {
     height: 30vh;
+  }
+
+  &__img {
+    width: 100%;
   }
 }
 
@@ -184,17 +199,20 @@ section {
 .slider__catalogue {
   display: flex;
   align-items: center;
-  height: 10em;
+  height: 12.5vw;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
   background-color: $white;
   width: 100%;
+  padding: 1em 0;
 }
 
 .stock {
-  display: flex;
-  flex-flow: column;
-  height: 25vh;
-  justify-content: space-between;
+  // display: flex;
+  // flex-flow: column;
+  // justify-content: space-between;
+  height: 100%;
+  position: relative;
+  margin-bottom: 5em;
 }
 
 .stock__header {
@@ -223,7 +241,7 @@ section {
 }
 
 .menu__item {
-  width: 65%;
+  width: 100%;
   background-color: $super_white;
   box-shadow: -4px -4px 20px rgba(0, 0, 0, 0.25),
     4px 4px 20px rgba(0, 0, 0, 0.25);
@@ -231,11 +249,11 @@ section {
   padding: 0.5em 2em;
 
   &--row {
-    height: 3.5em;
+    height: 4.5em;
+    cursor: pointer;
 
     p {
       height: 100%;
-      // width: 75%;
       border-bottom: 1px solid #c4c4c4;
       font-weight: 500;
       font-size: 1.25em;
@@ -269,7 +287,6 @@ section {
 }
 
 .catalogue__items {
-  height: 75vh;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
@@ -277,7 +294,23 @@ section {
 
 .slider__image {
   height: 12.5em;
-  width: 15em;
+  width: 95% !important;
+  margin: 0 1em;
+  background-color: $black;
+
+  img {
+    object-fit: cover;
+    height: 100%;
+    opacity: 0.75;
+    width: 100%;
+  }
+}
+
+.slider__image--catalogue {
+  height: 100%;
+  width: 95% !important;
+  margin: 0 1em;
+
   background-color: $black;
 
   img {
@@ -308,10 +341,26 @@ section {
   justify-content: space-evenly;
 }
 
+.social_media__icons {
+  cursor: pointer;
+}
+
+.contact__grid {
+  display: grid;
+  grid-template-areas:
+    "form desc"
+    "form map";
+
+  grid-template-rows: 0.3fr 0.7fr;
+  grid-template-columns: 0.45fr 0.55fr;
+}
+
 .form {
+  grid-area: form;
   display: flex;
   flex-flow: column;
   width: 80%;
+
   label {
     font-size: 1.25rem;
   }
@@ -416,6 +465,10 @@ footer {
   }
 }
 
+.footer__icons {
+  cursor: pointer;
+}
+
 .section_break {
   height: 30vh;
   width: 100%;
@@ -428,4 +481,164 @@ footer {
 .row {
   padding-top: 2em;
   padding-bottom: 2em;
+}
+
+.info {
+  grid-area: desc;
+}
+
+.map {
+  grid-area: map;
+}
+
+@media screen and (max-width: 1320px) {
+  .contact__grid {
+    grid-template-areas:
+      "form desc"
+      "form desc"
+      "map map";
+
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 0.6fr 0.4fr;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .tag {
+    justify-content: center;
+    flex-flow: column;
+
+    img {
+      margin-bottom: 2em;
+    }
+  }
+
+  .tag__info {
+    text-align: center;
+
+    div {
+      width: 100%;
+    }
+  }
+  .line_cyan__short,
+  .line_cyan__long {
+    display: none;
+  }
+
+  .info__header {
+    height: 100%;
+    justify-content: space-evenly;
+  }
+  .section_break {
+    height: 15vh;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .slider__catalogue {
+    height: 20vw;
+  }
+  .catalogue__menu {
+    margin-bottom: 2em;
+  }
+
+  .menu__item {
+    display: flex;
+    box-shadow: none;
+    justify-content: space-evenly;
+
+    div {
+      box-shadow: -4px -4px 20px rgba(0, 0, 0, 0.25),
+        4px 4px 20px rgba(0, 0, 0, 0.25);
+
+      padding: 1em 1.5em;
+      height: auto;
+      border-radius: 50px;
+    }
+  }
+
+  .menu__item--row {
+    p {
+      border-bottom: none;
+    }
+  }
+}
+
+@media screen and (max-width: 895px) {
+  footer {
+    flex-flow: column;
+
+    div {
+      text-align: center;
+      height: 100%;
+      padding: 1.5em;
+    }
+  }
+
+  .footer__menu {
+    display: flex;
+    justify-content: space-evenly;
+    a {
+      margin-right: 0;
+    }
+  }
+
+  .footer__social {
+    display: flex;
+    justify-content: space-evenly;
+
+    img {
+      margin-left: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    .jumbotron {
+      padding-right: 2em;
+    }
+  }
+  .jumbotron__img {
+    display: none;
+  }
+
+  .menu__item {
+    div {
+      padding: 1em;
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .contact__grid {
+    grid-template-areas:
+      "form"
+      "desc"
+      "map";
+
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr;
+  }
+
+  .form {
+    margin-bottom: 2em;
+  }
+
+  .tag {
+    margin-bottom: 2em;
+  }
+
+  .menu__item {
+    flex-wrap: wrap;
+
+    &--row {
+      margin: 0.75em 0.25em;
+    }
+  }
 }
