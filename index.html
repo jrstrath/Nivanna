@@ -213,7 +213,7 @@
                         <div class="info__item col-lg-6">
                             <!-- Call us -->
                             <div class="tag">
-                                <img src="src/img/call.svg" alt="Phone Icon">
+                                <img src="<?php bloginfo( 'template_directory' )?>/src/img/call.svg" alt="Phone Icon">
                                 <div class="tag__info">
                                     <div class="line_cyan__short"></div>
                                     <div>
@@ -232,7 +232,7 @@
                         <div class="info__item col-lg-6">
                             <!-- Call us -->
                             <div class="tag">
-                                <img src="src/img/pin.svg" alt="Pin icon">
+                                <img src="<?php bloginfo( 'template_directory' )?>/src/img/pin.svg" alt="Pin icon">
                                 <div class="tag__info">
                                     <div class="line_cyan__long"></div>
                                     <div>
@@ -252,15 +252,29 @@
 
                     </div>
 
-
-                    <!-- div.map to embed the google map into the website -->
-                    <div class="map"></div>
+                    <script>
+                        // Initialize and add the map
+                        function initMap() {
+                            // The location of City Mall
+                            var uluru = { lat: -4.019433, lng: 39.721098 };
+                            // The map, centered at City Mall
+                            var map = new google.maps.Map(
+                                document.getElementById('map'), { zoom: 18, center: uluru });
+                            // The marker, positioned at Uluru
+                            var marker = new google.maps.Marker({ position: uluru, map: map });
+                        }
+                    </script>
+                    <script async defer
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZhcq7rb3Q-aJ34SMddOMoNxnToodGjHs&callback=initMap">
+                        </script>
                 </div>
+                <!-- div.map to embed the google map into the website -->
+                <div id='map' class="map"></div>
 
                 <!-- Other contact info -->
             </div>
         </section>
-        </div>
+        </!doctype>
 
         <footer>
             <div class="footer__menu">
