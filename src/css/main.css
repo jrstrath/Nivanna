@@ -6,7 +6,11 @@
   font-family: "Montserrat", sans-serif; }
 
 body {
-  background-color: #ffffff; }
+  background-color: #efefef; }
+
+.container-fluid {
+  width: 100%;
+  max-width: 1368px; }
 
 div {
   padding: 0; }
@@ -36,11 +40,13 @@ h2 {
   top: 0;
   width: 100%;
   z-index: 100;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  height: 60px; }
   .navbar a.navbar-brand {
     color: #000000;
     font-weight: 500;
-    font-size: 1.5rem; }
+    font-size: 1rem;
+    text-transform: uppercase; }
 
 .header {
   position: relative;
@@ -51,7 +57,7 @@ h2 {
 .header__text h1 {
   font-weight: bold;
   color: #031926;
-  font-size: 2rem; }
+  font-size: 1.5rem; }
 .header__text p span {
   color: #4ba1aa; }
 
@@ -83,16 +89,15 @@ a.nav-brand {
 section {
   height: 100%;
   position: relative;
-  padding: 2em; }
+  padding: 2em 1em; }
   section.jumbotron {
-    height: 100vh;
-    padding-right: 0; }
+    height: 768px; }
 
 .jumbotron {
   position: relative;
   background-color: transparent; }
   .jumbotron .top {
-    height: 65vh;
+    height: 100%;
     position: relative; }
   .jumbotron .bottom {
     height: 30vh;
@@ -104,26 +109,28 @@ section {
   display: flex;
   flex-flow: column;
   height: 100%; }
-  .jumbotron__msg--text--head {
-    font-weight: bold;
-    font-size: 2.5rem;
-    margin-top: 3em;
-    padding-bottom: 0.25em; }
-  .jumbotron__msg--text--minor {
-    font-size: 1.15rem; }
+  .jumbotron__msg--text {
+    margin-bottom: 2em !important; }
+    .jumbotron__msg--text--head {
+      font-weight: bold;
+      font-size: 2rem;
+      margin-top: 3em;
+      padding-bottom: 0.25em; }
+    .jumbotron__msg--text--minor {
+      font-size: 1rem; }
 
 .jumbotron__img {
-  height: 90%;
+  height: 505.26316px;
   background-color: grey;
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
+  border-radius: 50px;
   background: url("/src/img/jumbotron.jpg"), linear-gradient(rgba(75, 161, 170, 0.24), rgba(75, 161, 170, 0.24));
   background-blend-mode: overlay;
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
-  width: 47.5vw;
-  right: 0; }
+  width: 615.6px;
+  right: 0;
+  top: 15%; }
 
 .jumbotron__btn {
   height: 4.5em;
@@ -185,7 +192,8 @@ section {
   background-color: #ffffff;
   box-shadow: -4px -4px 20px rgba(0, 0, 0, 0.25), 4px 4px 20px rgba(0, 0, 0, 0.25);
   margin: auto;
-  padding: 0.5em 2em; }
+  padding: 0.5em 2em;
+  height: 100%; }
   .menu__item--row {
     height: 4.5em;
     cursor: pointer; }
@@ -208,7 +216,8 @@ section {
 
 .catalogue__menu {
   display: flex;
-  margin: auto; }
+  margin: auto;
+  height: 100%; }
 
 .catalogue__items {
   display: flex;
@@ -355,8 +364,7 @@ footer {
   background-size: cover; }
 
 .row {
-  padding-top: 2em;
-  padding-bottom: 2em; }
+  padding: 2em 1em; }
 
 .info {
   grid-area: desc; }
