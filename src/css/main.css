@@ -27,7 +27,7 @@ p {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 500;
 }
 
@@ -245,7 +245,7 @@ section.jumbotron {
 
 .stock__header {
   font-weight: 500;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: #000000;
   line-height: 2em;
 }
@@ -401,6 +401,7 @@ section.jumbotron {
       grid-template-rows: 0.3fr 0.7fr;
   -ms-grid-columns: 0.45fr 0.55fr;
       grid-template-columns: 0.45fr 0.55fr;
+  padding: 2em 1em;
 }
 
 .form {
@@ -419,7 +420,7 @@ section.jumbotron {
 }
 
 .form label {
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 .form input,
@@ -460,11 +461,24 @@ section.jumbotron {
   display: flex;
 }
 
+.tag img {
+  width: 50px;
+  height: 50px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
 .tag__info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
+}
+
+.tag__info--header {
+  font-weight: 500;
+  font-size: 1.2rem;
 }
 
 .line_cyan__short {
@@ -488,6 +502,9 @@ section.jumbotron {
 footer {
   background-color: #470024;
   padding: 3em 2em;
+}
+
+footer .container-fluid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -499,7 +516,7 @@ footer {
           align-items: center;
 }
 
-footer div {
+footer .container-fluid div {
   width: 100%;
 }
 
@@ -545,12 +562,14 @@ footer div {
 }
 
 .section_break {
-  height: 30vh;
+  height: 230.4px;
   width: 100%;
   background: url("/src/img/living_room.jpg");
   background-repeat: no-repeat;
   background-position-y: 40%;
   background-size: cover;
+  max-width: 1368px;
+  margin: auto;
 }
 
 .row {

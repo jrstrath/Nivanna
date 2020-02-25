@@ -31,7 +31,7 @@ p {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 500;
 }
 
@@ -227,7 +227,7 @@ section {
 
 .stock__header {
   font-weight: 500;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: $black;
   line-height: 2em;
 }
@@ -364,6 +364,7 @@ section {
 
   grid-template-rows: 0.3fr 0.7fr;
   grid-template-columns: 0.45fr 0.55fr;
+  padding: 2em 1em;
 }
 
 .form {
@@ -373,7 +374,7 @@ section {
   width: 80%;
 
   label {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 
   input,
@@ -405,11 +406,22 @@ section {
 
 .tag {
   display: flex;
+
+  img {
+    width: 50px;
+    height: 50px;
+    align-self: center;
+  }
 }
 
 .tag__info {
   display: flex;
   position: relative;
+
+  &--header {
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
 }
 
 .line_cyan {
@@ -436,11 +448,13 @@ footer {
   background-color: $scarlet;
   padding: 3em 2em;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  div {
-    width: 100%;
+  .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    div {
+      width: 100%;
+    }
   }
 }
 
@@ -481,12 +495,14 @@ footer {
 }
 
 .section_break {
-  height: 30vh;
+  height: $vh * 0.3;
   width: 100%;
   background: url("/src/img/living_room.jpg");
   background-repeat: no-repeat;
   background-position-y: 40%;
   background-size: cover;
+  max-width: $vw;
+  margin: auto;
 }
 
 .row {
