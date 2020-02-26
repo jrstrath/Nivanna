@@ -14,12 +14,6 @@ $(document).ready(function() {
     // Sets the slider to be the navigation of other slider (Class or ID Name)
     asNavFor: null,
 
-    // prev arrow
-    prevArrow: '<div class="prev slider__nav></div>',
-
-    // next arrow
-    nextArrow: '<div class="next slider__nav></div>',
-
     // Enables auto play of slides
     autoplay: true,
 
@@ -34,6 +28,7 @@ $(document).ready(function() {
     centerPadding: "50px",
 
     // CSS3 easing
-    cssEase: "ease"
+    cssEase: "ease",
+    variableWidth: true
   });
 });
