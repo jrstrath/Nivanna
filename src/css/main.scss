@@ -11,6 +11,7 @@
 * {
   font-family: "Montserrat", sans-serif;
 }
+
 body {
   background-color: $off_white;
 }
@@ -48,6 +49,7 @@ h2 {
     font-size: 1.5rem;
   }
 }
+
 .navbar {
   position: fixed;
   top: 0;
@@ -63,6 +65,7 @@ h2 {
     text-transform: uppercase;
   }
 }
+
 .header {
   position: relative;
   display: flex;
@@ -78,6 +81,7 @@ h2 {
     color: $dark_blue;
     font-size: 1.5rem;
   }
+
   p {
     span {
       color: $cyan;
@@ -90,6 +94,7 @@ h2 {
   color: $black;
   font-size: 1rem;
   font-weight: 500;
+
   &.active {
     font-weight: bold;
   }
@@ -106,9 +111,11 @@ a.nav-brand {
 .prev {
   background-image: url("/src/img/prev_arrow.svg");
 }
+
 .next {
   background-image: url("/src/img/next_arrow.svg");
 }
+
 .prev,
 .next {
   background-position: center;
@@ -125,6 +132,7 @@ section {
     height: $vh;
   }
 }
+
 .jumbotron {
   position: relative;
   background-color: transparent;
@@ -146,14 +154,17 @@ section {
   display: flex;
   flex-flow: column;
   height: 100%;
+
   &--text {
     margin-bottom: 2em !important;
+
     &--head {
       font-weight: bold;
       font-size: 2rem;
       margin-top: 3em;
       padding-bottom: 0.25em;
     }
+
     &--minor {
       font-size: 1rem;
     }
@@ -162,13 +173,10 @@ section {
 
 .jumbotron__img {
   height: $vh / 1.52;
-  background-color: grey;
   border-radius: 50px;
   // border-bottom-left-radius: 50px;
-  background: url("/src/img/jumbotron.jpg"),
-    linear-gradient(rgba($cyan, 0.24), rgba($cyan, 0.24));
   background-blend-mode: overlay;
-  background-repeat: no-repeat;
+  background: grey url("/src/img/jumbotron.jpg") linear-gradient(rgba($cyan, 0.24), rgba($cyan, 0.24)) no-repeat;
   background-size: cover;
   position: absolute;
   width: $vw * 0.45;
@@ -181,6 +189,7 @@ section {
   width: 15em;
   margin-bottom: 5em;
 }
+
 #lightSlider {
   height: 30vh;
 }
@@ -210,7 +219,7 @@ section {
   display: flex;
   align-items: center;
   height: $vw * 0.125;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   background-color: $white;
   width: 100%;
   padding: 1em 0;
@@ -254,7 +263,7 @@ section {
   width: 100%;
   background-color: $super_white;
   box-shadow: -4px -4px 20px rgba(0, 0, 0, 0.25),
-    4px 4px 20px rgba(0, 0, 0, 0.25);
+  4px 4px 20px rgba(0, 0, 0, 0.25);
   margin: auto;
   padding: 0.5em 2em;
   height: 100%;
@@ -358,9 +367,7 @@ section {
 
 .contact__grid {
   display: grid;
-  grid-template-areas:
-    "form desc"
-    "form map";
+  grid-template-areas: "form desc" "form map";
 
   grid-template-rows: 0.3fr 0.7fr;
   grid-template-columns: 0.45fr 0.55fr;
@@ -426,21 +433,17 @@ section {
 
 .line_cyan {
   &__short {
-    background: url("/src/img/Line_cyan.svg");
     height: 100%;
     width: 2em;
-    background-repeat: no-repeat;
     background-size: contain;
-    background-position: center;
+    background: url("/src/img/Line_cyan.svg") no-repeat center;
   }
 
   &__long {
-    background: url("/src/img/Line_cyan_long.svg");
     height: 100%;
     width: 2em;
-    background-repeat: no-repeat;
     background-size: contain;
-    background-position: center;
+    background: url("/src/img/Line_cyan_long.svg") no-repeat center;
   }
 }
 
@@ -452,6 +455,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     div {
       width: 100%;
     }
@@ -461,7 +465,7 @@ footer {
 .footer__menu {
   .link {
     color: $white;
-    font-weight: medium;
+    font-weight: 500;
     font-size: 1rem;
     margin-right: 1.5em;
   }
@@ -472,6 +476,7 @@ footer {
   flex-flow: column;
   text-align: center;
   color: $white;
+
   .logo,
   .copyright {
     color: $white;
@@ -485,6 +490,7 @@ footer {
 
 .footer__social {
   text-align: right;
+
   img {
     margin-left: 1em;
   }
@@ -497,8 +503,7 @@ footer {
 .section_break {
   height: $vh * 0.3;
   width: 100%;
-  background: url("/src/img/living_room.jpg");
-  background-repeat: no-repeat;
+  background: url("/src/img/living_room.jpg") no-repeat;
   background-position-y: 40%;
   background-size: cover;
   max-width: $vw;
@@ -533,12 +538,72 @@ footer {
   .nav-item {
     &.active {
       background-color: $scarlet;
+
       .nav-link {
         color: $super_white;
       }
     }
   }
 }
+
+
+.products {
+  padding: 2em 1em;
+  margin: 4em auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(11.5em, 1fr));
+  grid-gap: 1em;
+}
+
+.products__card {
+  border-radius: 5px;
+  background-color: $super-white;
+  padding: 0.5em;
+  position: relative;
+}
+
+.p_card__img {
+  width: 500px;
+  height: 500px;
+  max-height: 10em;
+  max-width: 100%;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+
+}
+
+.p_card__info {
+  margin-top: 1em;
+  position: relative;
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+}
+
+.info__price {
+  &:before {
+    content: 'Ksh. ';
+    font-weight: 500;
+  }
+}
+
+.cart {
+  background-image: url("../img/shopping-basket.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 1.25em;
+  height: 1.25em;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0.25em;
+  right: 0.5em;
+}
+
 
 @media screen and (max-width: 991px) {
   .slider__catalogue {
@@ -556,7 +621,7 @@ footer {
 
     div {
       box-shadow: -4px -4px 20px rgba(0, 0, 0, 0.25),
-        4px 4px 20px rgba(0, 0, 0, 0.25);
+      4px 4px 20px rgba(0, 0, 0, 0.25);
 
       padding: 1em;
       height: auto;
@@ -609,6 +674,7 @@ footer {
 
     .container-fluid {
       flex-flow: column;
+
       div {
         width: 50%;
       }
@@ -618,6 +684,7 @@ footer {
   .footer__menu {
     display: flex;
     justify-content: space-evenly;
+
     a {
       margin-right: 0;
     }
@@ -649,8 +716,10 @@ footer {
 
   .menu__item {
     margin-bottom: 1em;
+
     div {
       padding: 1em;
+
       p {
         font-size: 1rem;
       }
@@ -679,18 +748,14 @@ footer {
 
 @media screen and (max-width: 700px) {
   .contact__grid {
-    grid-template-areas:
-      "form"
-      "desc"
-      "map";
+    grid-template-areas: "form" "desc" "map";
 
     grid-template-rows: auto auto auto;
     grid-template-columns: 1fr;
   }
 
   .form {
-    margin: auto;
-    margin-bottom: 2em;
+    margin: auto auto 2em;
     width: 85%;
 
     h2 {
@@ -701,7 +766,6 @@ footer {
   .tag {
     margin-bottom: 2em;
     justify-content: left;
-    margin: auto;
     width: 75%;
   }
 
